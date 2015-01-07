@@ -1,0 +1,92 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div class="container" data-ng-init="init()">
+
+  <div class="row apis">
+    <div ng-include="'partials/game_blurb'"></div>
+  </div>
+
+  <div class="text-center">
+    <h2 class="text-aerospike">Play Game</h2>
+    <div>
+      <form class="form" name="form" ng-submit="retrieveGame()" novalidate>
+        <div class="form-group">
+          <input type="text" name='key' class="form-control" ng-model="game.key" placeholder="Enter Game Key">
+        </div>
+        <div class="form-group has-error">
+          <p class="help-block">{{ keyErrors }}</p>
+        </div>
+        <button type="submit" class="btn btn-primary btn-fixed"> Retrieve Game </button> 
+      </form>
+    </div>
+  </div>
+
+  <div class='pad-top-bottom'>
+    <ul ng-show='gameStats.gameKey'>
+      <li>Game Key: {{gameStats.gameKey}}</li>
+      <li>Initiated By: {{gameStats.initiated}}</li>
+      <li>Opponent: {{gameStats.opponent}}</li>
+      <li>Turn: {{gameStats.turn | uppercase}}</li>   
+      <li ng-class="{'text-aerospike' : gameStats.winner != ''}">Status: {{gameStats.status}}</li>
+      <li ng-class="{'text-aerospike' : gameStats.winner != ''}">Winner: {{gameStats.winner | uppercase}}</li>   
+<!--       <li>TopLeft: {{gameStats.TopLeft | uppercase}}</li>      
+      <li>TopMiddle: {{gameStats.TopMiddle | uppercase}}</li>      
+      <li>TopRight: {{gameStats.TopRight | uppercase}}</li>      
+      <li>MiddleLeft: {{gameStats.MiddleLeft | uppercase}}</li>      
+      <li>MiddleMiddle: {{gameStats.MiddleMiddle | uppercase}}</li>      
+      <li>MiddleRight: {{gameStats.MiddleRight | uppercase}}</li>      
+      <li>BottomLeft: {{gameStats.BottomLeft | uppercase}}</li>      
+      <li>BottomMiddle: {{gameStats.BottomMiddle | uppercase}}</li>      
+      <li>BottomRight: {{gameStats.BottomRight | uppercase}}</li>      
+ -->    </ul>
+
+    <div class='text-center' ng-show='gameStats.gameKey'>
+      <div ng-show='gameStats.status == "PENDING" && gameStats.turn == username'>
+        <form class="form" name="form" ng-submit="acceptGame(form)" novalidate>
+          <button type="submit" class="btn btn-primary btn-fixed"> Accept Game Request </button> 
+        </form>
+      </div>
+      <div ng-hide='gameStats.status == "PENDING"'>
+        <div>
+          <form class="form pad-a-little" name="form1" ng-submit="updateGame(form1, 'TopLeft')" style="float:left" novalidate>
+            <button type="submit" class="btn btn-fixed" ng-class="{'neutral': gameStats.TopLeft == '', 'even': gameStats.TopLeft === username, 'odd': gameStats.TopLeft !== username}"> {{gameStats.TopLeft}} </button> 
+          </form>
+          <form class="form pad-a-little" name="form2" ng-submit="updateGame(form2, 'TopMiddle')" style="float:left" novalidate>
+            <button type="submit" class="btn btn-fixed" ng-class="{'neutral': gameStats.TopMiddle == '', 'even': gameStats.TopMiddle === username, 'odd': gameStats.TopMiddle !== username}"> {{gameStats.TopMiddle}} </button> 
+          </form>
+          <form class="form pad-a-little" name="form3" ng-submit="updateGame(form, 'TopRight')" style="float:left" novalidate>
+            <button type="submit" class="btn btn-fixed" ng-class="{'neutral': gameStats.TopRight == '', 'neutral': gameStats.TopRight == '', 'even': gameStats.TopRight === username, 'odd': gameStats.TopRight !== username}"> {{gameStats.TopRight}} </button> 
+          </form>
+        </div>
+        <div style="clear:both">
+          <form class="form pad-a-little" name="form4" ng-submit="updateGame(form4, 'MiddleLeft')" style="float:left" novalidate>
+            <button type="submit" class="btn btn-fixed" ng-class="{'neutral': gameStats.MiddleLeft == '', 'even': gameStats.MiddleLeft === username, 'odd': gameStats.MiddleLeft !== username}"> {{gameStats.MiddleLeft}} </button> 
+          </form>
+          <form class="form pad-a-little" name="form5" ng-submit="updateGame(form5, 'MiddleMiddle')" style="float:left" novalidate>
+            <button type="submit" class="btn btn-fixed" ng-class="{'neutral': gameStats.MiddleMiddle == '', 'even': gameStats.MiddleMiddle === username, 'odd': gameStats.MiddleMiddle !== username}"> {{gameStats.MiddleMiddle}} </button> 
+          </form>
+          <form class="form pad-a-little" name="form6" ng-submit="updateGame(form6, 'MiddleRight')" style="float:left" novalidate>
+            <button type="submit" class="btn btn-fixed" ng-class="{'neutral': gameStats.MiddleRight == '', 'even': gameStats.MiddleRight === username, 'odd': gameStats.MiddleRight !== username}"> {{gameStats.MiddleRight}} </button> 
+          </form>
+        </div>
+        <div style="clear:both">
+          <form class="form pad-a-little" name="form7" ng-submit="updateGame(form7, 'BottomLeft')" style="float:left" novalidate>
+            <button type="submit" class="btn btn-fixed" ng-class="{'neutral': gameStats.BottomLeft == '', 'even': gameStats.BottomLeft === username, 'odd': gameStats.BottomLeft !== username}"> {{gameStats.BottomLeft}} </button> 
+          </form>
+          <form class="form pad-a-little" name="form8" ng-submit="updateGame(form8, 'BottomMiddle')" style="float:left" novalidate>
+            <button type="submit" class="btn btn-fixed" ng-class="{'neutral': gameStats.BottomMiddle == '', 'even': gameStats.BottomMiddle === username, 'odd': gameStats.BottomMiddle !== username}"> {{gameStats.BottomMiddle}} </button> 
+          </form>
+          <form class="form pad-a-little" name="form9" ng-submit="updateGame(form9, 'BottomRight')" style="float:left" novalidate>
+            <button type="submit" class="btn btn-fixed" ng-class="{'neutral': gameStats.BottomRight == '', 'even': gameStats.BottomRight === username, 'odd': gameStats.BottomRight !== username}"> {{gameStats.BottomRight}} </button> 
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center has-error" style="clear: both">
+      <h4 class="help-block">{{ playErrors }}</h4>
+    </div>
+
+  </div>
+
+</div>

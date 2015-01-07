@@ -1,0 +1,47 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div class="container" ng-init="init()">
+
+<!--   <div class="text-center">
+    <h2>Transactions Per Second</h2>
+  </div>
+
+  <div class="admin-panel">
+    <div class="text-center">
+      <span class="admin reads">Reads:&nbsp;</span><span ng-bind="reads" class="admin reads"></span>
+    </div>
+    <div class="text-center">
+      <span class="admin writes">Writes:&nbsp;</span><span ng-bind="writes" class="admin writes"></span>
+    </div>
+  </div>
+ -->
+
+  <div>
+    <h2 class="text-center text-aerospike">Your API Calls</h2>
+    <div ng-show="apiCalls.length <= 0">
+      <h3 class="text-center">None</h3>
+      <p>
+        <img class="img-smiley-frowny frowny" src="images/frowny.png"/>
+        <img class="img-smiley-frowny smiley" src="images/smiley.png"/>
+        Create an app and start using this awesome REST API for free. Once you do, you will see a list of all the successful API calls you've made from your app listed here. Go ahead and turn the frown upside down!
+      </p>
+    </div>
+  </div>
+
+  <div infinite-scroll="retrieveAPICalls()" infinite-scroll-disabled='busy' infinite-scroll-distance='1'>
+    <div ng-repeat="apiCall in apiCalls">
+      <div class="api-line-item" ng-class-odd="'odd'" ng-class-even="'even'">
+        <div>HTTP Method: {{apiCall.type}}</div>
+        <div>Key: {{apiCall.key}}</div>
+        <div ng-show="apiCall.params">
+          Params: 
+          <ul ng-repeat="paramPair in apiCall.params">
+            <li>{{paramPair.bin}}: {{paramPair.binValue}}</li>
+          </ul>
+        </div> 
+      </div>
+      <hr class='aerospike-separator'/>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,28 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div class="container" data-ng-init="init()">
+
+  <div class="row apis">
+    <div ng-include="'partials/game_blurb'"></div>
+  </div>
+
+  <div class="text-center">
+    <h2 class="text-aerospike pad-top-bottom">Start New Game</h2>
+    <div>
+      <form class="form" name="form" ng-submit="createGame(form)" novalidate>
+        <div class="form-group">
+          <input type="text" name="username" class="form-control" ng-model="opponent.username" placeholder="Enter Opponent">
+        </div>
+        <div class="form-group has-error">
+          <p class="help-block">{{ startErrors }}</p>
+        </div>
+        <button type="submit" class="btn btn-primary btn-fixed"> Send Invite </button> 
+      </form>
+    </div>
+    <h4 ng-show='gameKey'>Game Key: {{gameKey}}</h4>
+  </div>
+
+  <div class="text-center">
+  </div>
+
+</div>

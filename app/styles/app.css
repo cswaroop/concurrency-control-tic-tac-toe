@@ -1,0 +1,699 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \000036;
+  }
+}
+
+body {
+  color: #ababab;
+  background-color: #222222;
+  font-family: "Lato","Ubuntu";
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000312;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: #ffffff;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000316;
+  }
+}
+
+.jumbotron {
+  background-color: #c31618;
+  color: #ffffff;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000321;
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000325;
+  }
+}
+
+.input-group-addon,
+.input-group-btn {
+  vertical-align: top;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000329;
+  }
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li > a:hover,
+.nav-pills > li.active > a:focus {
+  background-color: #ffffff;
+  color: #000000;
+  border-bottom: 4px solid red;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000335;
+  }
+}
+
+.nav-pills > li > a {
+  border-radius: 0px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000339;
+  }
+}
+
+.nav-tabs > li > a {
+  color: #ffffff;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000343;
+  }
+}
+
+.nav-tabs > li > a:hover {
+  color: #000000;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000347;
+  }
+}
+
+.main-content {
+  min-height: 650px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000351;
+  }
+}
+
+.text-aerospike {
+  color: #c31618;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000355;
+  }
+}
+
+.onoffswitch {
+  position: relative;
+  width: 120px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin: 20% 0 0 80%;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000361;
+  }
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000365;
+  }
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 30px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000370;
+  }
+}
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000376;
+  }
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 21px;
+  padding: 0;
+  line-height: 21px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000382;
+  }
+}
+
+.onoffswitch-inner:before {
+  content: "Alerts - ON";
+  padding-left: 10px;
+  background-color: #ff4136;
+  color: #FFFFFF;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000388;
+  }
+}
+
+.onoffswitch-inner:after {
+  content: "Alerts - OFF";
+  padding-right: 10px;
+  background-color: #FFFFFF;
+  color: #000000;
+  text-align: right;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \0000395;
+  }
+}
+
+.onoffswitch-switch {
+  display: block;
+  width: 29px;
+  background: #FFFFFF;
+  border: 2px solid #999999;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 95px;
+  transition: all 0.3s ease-in 0s;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003104;
+  }
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003108;
+  }
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003112;
+  }
+}
+
+.admin-panel {
+  padding-top: 20px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003114;
+  }
+}
+
+.admin-panel .admin {
+  font-size: 40px;
+  color: #c31618;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.35);
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003121;
+  }
+}
+
+.apis {
+  padding-top: 20px;
+  font-size: 16px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003124;
+  }
+}
+
+.apis.headers {
+  font-size: 22px;
+  color: #c31618;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003130;
+  }
+}
+
+.aerospike-separator {
+  border-color: #000;
+  width: 80%;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003135;
+  }
+}
+
+.pad-a-little {
+  padding: 10px 0px 20px 10px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003139;
+  }
+}
+
+.pad-top-bottom {
+  padding: 10px 0px 10px 0px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003143;
+  }
+}
+
+.btn-fixed {
+  height: 35px;
+  width: 193px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003148;
+  }
+}
+
+.img-smiley-frowny {
+  width: 50px;
+  border: none;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003151;
+  }
+}
+
+.img-smiley-frowny.frowny {
+  float: left;
+  margin: 0px 10px 0px 0px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003155;
+  }
+}
+
+.img-smiley-frowny.smiley {
+  float: right;
+  margin: 0px 0px 0px 10px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003161;
+  }
+}
+
+.api-line-item {
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  /* Firefox 1-3.6 */
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003170;
+  }
+}
+
+.api-line-item.odd {
+  color: darkgray;
+  background-color: darkslategray;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003174;
+  }
+}
+
+.api-line-item.even {
+  color: darkslategray;
+  background-color: darkgray;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003178;
+  }
+}
+
+.api-line-item ul {
+  line-height: 0.8em;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003183;
+  }
+}
+
+.response,
+.error {
+  color: darkgray;
+  border-color: darkslategray;
+  background-color: darkslategray;
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  /* Firefox 1-3.6 */
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  border-radius: 10px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003195;
+  }
+}
+
+.tryit {
+  color: darkslategray;
+  border-color: darkgray;
+  background-color: darkgray;
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  /* Firefox 1-3.6 */
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  border-radius: 10px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003207;
+  }
+}
+
+.odd {
+  color: white;
+  background-color: darkslategray;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003211;
+  }
+}
+
+.even {
+  color: white;
+  background-color: darkgray;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003215;
+  }
+}
+
+.neutral {
+  color: white;
+  background-color: black;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003220;
+  }
+}
+
+.btn:hover,
+.btn:focus {
+  outline: none;
+  text-decoration: none;
+  color: white;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/dash\/Apps\/tictactoe-app\/app\/styles\/app\.scss;
+  }
+
+  line {
+    font-family: \00003226;
+  }
+}
+
+.btn {
+  outline: none;
+  text-decoration: none;
+}
