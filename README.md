@@ -30,7 +30,7 @@ At a higher-level, here’s what happens -- after creating an account and/or log
 1. Start a new game by inviting someone to play
 2. Accept (pending) invite to play
 
-NOTE: Users are notified of new game invites via Socket.io
+**NOTE**: Users are notified of new game invites via Socket.io in real-time and in this version of the application both users must be logged in to see the invite. In future, I will add a way to see all pending invites etc.
 
 **As the game progresses with every move, here’s what must happen in order to keep the game fair and square:**
 
