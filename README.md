@@ -2,13 +2,15 @@
 
 A web-based game with multiple players playing against each other at the same time. This application uses the Aerospike Node.js Client to store and retrieve game data and AngularJS web framework to illustrate end-to-end application development in Aerospike DB.
 
-Since tic-tac-toe is a turn-based game, care must be taken to ensure that the implementation is in fact turn-based, and that players cannot cheat and play out of turn. This concurrency related issue can be prevented by moving conditional writes and updates from the client to the server using User Defined Functions. UDFs are a powerful feature of Aerospike DB and they can be used to extend the capability of the Aerospike DB engine both in terms of functionality and performance. For more information on UDFs, [click here](http://www.aerospike.com/docs/guide/udf.html).
+Since tic-tac-toe is a turn-based game, care must be taken to ensure that the implementation is in fact turn-based, and that players cannot cheat and play out of turn. For example, consider a tic-tac-toe game between John and Jane. If John played three moves simultaneously by opening different browser windows before Jane played her turn, sequence of updates would result in John winning the game by way of “cheating.” Good for John but not so much for Jane! (Till she figures out the same technique… yea, John!)
+
+In this application, concurrency control is achieved by adding conditional writes and game state updates on the server using User Defined Functions. UDFs are a powerful feature of Aerospike DB and they can be used to extend the capability of the Aerospike DB engine both in terms of functionality and performance. For more information on UDFs, [click here](http://www.aerospike.com/docs/guide/udf.html).
 
 ## Prerequisite
 
 - [Aerospike Server](http://www.aerospike.com/download/server/latest) – The server should be running and accessible from this app.
 
-## Technical Know-how Prerequisites
+## Technical Know-How Prerequisites
 
 Even though this is a pretty lightweight application, I’ve used different technologies to make it decent enough - *visually & functionally* - and covering all aspects as well as walking through the entire codebase is beyond the scope of this post. So, good understanding and working knowledge of the following technologies is presumed.
 
