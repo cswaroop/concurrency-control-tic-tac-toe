@@ -48,8 +48,6 @@ As the game progresses with every move...
     
     *   Is the game now over? If so, set *status* to "DUNZZO" and if there is a winner, set *winner* to current user’s username 
 
-NOTE: For more detailed explanation, read this [blog post](http://www.iamontheinet.com/2015/01/06/concurrency-control-in-multi-player-games-aerospike)
-
 ## Usage
 
 ### Build
@@ -77,3 +75,6 @@ Open web browser and point it to:
 ### Play
 
 Open two different browsers (or two incongnito browser windows) and login as two different users. Then send a game invite from one user to the other by clicking on **New Game** tab. The new game will auto-appear for both users on **Home** tab. Play the game and see who wins!
+
+For more detailed explanation, comments, and feedback, read this [blog post](http://www.iamontheinet.com/2015/01/06/concurrency-control-in-multi-player-games-aerospike)
+
