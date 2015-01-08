@@ -7,8 +7,8 @@
   </div>
 
   <div class="text-center">
-    <h2 class="text-aerospike">Play Game</h2>
-    <div>
+    <h2 class="text-aerospike" ng-show='gameStats.gameKey'>Most Recent Game</h2>
+    <div ng-hide="true">
       <form class="form" name="form" ng-submit="retrieveGame()" novalidate>
         <div class="form-group">
           <input type="text" name='key' class="form-control" ng-model="game.key" placeholder="Enter Game Key">
@@ -19,6 +19,7 @@
         <button type="submit" class="btn btn-primary btn-fixed"> Retrieve Game </button> 
       </form>
     </div>
+    <h2 class="text-aerospike" ng-hide='gameStats.gameKey'><a href="/new">Start A New Game!</a></h2>
   </div>
 
   <div class='pad-top-bottom'>
@@ -29,16 +30,7 @@
       <li>Turn: {{gameStats.turn | uppercase}}</li>   
       <li ng-class="{'text-aerospike' : gameStats.winner != ''}">Status: {{gameStats.status}}</li>
       <li ng-class="{'text-aerospike' : gameStats.winner != ''}">Winner: {{gameStats.winner | uppercase}}</li>   
-<!--       <li>TopLeft: {{gameStats.TopLeft | uppercase}}</li>      
-      <li>TopMiddle: {{gameStats.TopMiddle | uppercase}}</li>      
-      <li>TopRight: {{gameStats.TopRight | uppercase}}</li>      
-      <li>MiddleLeft: {{gameStats.MiddleLeft | uppercase}}</li>      
-      <li>MiddleMiddle: {{gameStats.MiddleMiddle | uppercase}}</li>      
-      <li>MiddleRight: {{gameStats.MiddleRight | uppercase}}</li>      
-      <li>BottomLeft: {{gameStats.BottomLeft | uppercase}}</li>      
-      <li>BottomMiddle: {{gameStats.BottomMiddle | uppercase}}</li>      
-      <li>BottomRight: {{gameStats.BottomRight | uppercase}}</li>      
- -->    </ul>
+    </ul>
 
     <div class='text-center' ng-show='gameStats.gameKey'>
       <div ng-show='gameStats.status == "PENDING" && gameStats.turn == username'>
@@ -83,7 +75,7 @@
       </div>
     </div>
 
-    <div class="text-center has-error" style="clear: both">
+    <div class="text-center has-error" style="clear: both;">
       <h4 class="help-block">{{ playErrors }}</h4>
     </div>
 

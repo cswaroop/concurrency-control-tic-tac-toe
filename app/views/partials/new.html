@@ -11,7 +11,7 @@
     <div>
       <form class="form" name="form" ng-submit="createGame(form)" novalidate>
         <div class="form-group">
-          <input type="text" name="username" class="form-control" ng-model="opponent.username" placeholder="Enter Opponent">
+          <input type="text" name="username" class="form-control" ng-model="opponent.username" placeholder="Enter Opponent's Username -- yep, you need to know it!">
         </div>
         <div class="form-group has-error">
           <p class="help-block">{{ startErrors }}</p>
@@ -19,10 +19,7 @@
         <button type="submit" class="btn btn-primary btn-fixed"> Send Invite </button> 
       </form>
     </div>
-    <h4 ng-show='gameKey'>Game Key: {{gameKey}}</h4>
-  </div>
-
-  <div class="text-center">
+    <h4 ng-show='inviteStatus'>Game Invite Sent to {{opponent.username}}</h4>
   </div>
 
 </div>
