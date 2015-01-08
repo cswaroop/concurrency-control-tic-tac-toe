@@ -12,7 +12,7 @@ In this application, concurrency control is achieved by adding conditional write
 
 ## Technical Know-How Prerequisites
 
-Even though this is a pretty lightweight application, I’ve used different technologies to make it decent enough - *visually & functionally* - and covering all aspects as well as walking through the entire codebase is beyond the scope of this post. So, good understanding and working knowledge of the following technologies is presumed.
+Even though this is a pretty lightweight application, I’ve used different technologies to make it decent enough - *visually & functionally* - and covering all aspects as well as walking through the entire codebase is beyond the scope. So, good understanding and working knowledge of the following technologies is presumed.
 
 * Node.js
 * AngularJS
@@ -48,7 +48,7 @@ As the game progresses with every move...
     
     *   Is the game now over? If so, set *status* to "DUNZZO" and if there is a winner, set *winner* to current user’s username 
 
-For more details, read this [blog post](http://www.iamontheinet.com)
+For more detailed explanation on data model etc., read this [blog post](http://www.iamontheinet.com/2015/01/06/concurrency-control-in-multi-player-games-aerospike)
 
 ## Usage
 
