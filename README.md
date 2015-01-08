@@ -10,7 +10,7 @@ In this application, concurrency control is achieved by adding conditional write
 
 - [Aerospike Server](http://www.aerospike.com/download/server/latest) – The server should be running and accessible from this app.
 
-## Technical Know-How Prerequisites
+## Technical Know-How
 
 Even though this is a pretty lightweight application, I’ve used different technologies to make it decent enough - *visually & functionally* - and covering all aspects as well as walking through the entire codebase is beyond the scope. So, good understanding and working knowledge of the following technologies is presumed.
 
