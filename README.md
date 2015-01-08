@@ -76,5 +76,7 @@ Open web browser and point it to:
 
 Open two different browsers (or two incongnito browser windows) and login as two different users. Then send a game invite from one user to the other by clicking on **New Game** tab. The new game will auto-appear for both users on **Home** tab. Play the game and see who wins!
 
+### Blog
+
 For more detailed explanation, comments, and feedback, read this [blog post](http://www.iamontheinet.com/2015/01/06/concurrency-control-in-multi-player-games-aerospike)
 
