@@ -1,10 +1,12 @@
 # Tic | Tac | Toe
 
-A web-based game with multiple players playing against each other at the same time. This application uses the Aerospike Node.js Client to store and retrieve game data and AngularJS web framework to illustrate end-to-end application development in Aerospike DB.
+This is a web-based game with multiple players playing against each other at the same time. This application uses the Aerospike Node.js Client to store and retrieve game data and AngularJS web framework to illustrate end-to-end application development in Aerospike DB.
 
-Since tic-tac-toe is a turn-based game, care must be taken to ensure that the implementation is in fact turn-based, and that players cannot cheat and play out of turn. For example, consider a tic-tac-toe game between John and Jane. If John played three moves simultaneously by opening different browser windows before Jane played her turn, sequence of updates would result in John winning the game by way of “cheating.” Good for John but not so much for Jane! (Till she figures out the same technique… yea, John!)
+Concurrency control is one of the main aspects of multi-player games where all the checks, conditional writes and game state updates must be made as fast as possible and with minimal client/server calls in order to keep the game fair and square. This is especially critical in turn-based games where careless implementation (such as putting code that alters the game state in the client) can lead to concurrency related "race condition" from creeping in.
 
-In this application, concurrency control is achieved by adding conditional writes and game state updates on the server using User Defined Functions. UDFs are a powerful feature of Aerospike DB and they can be used to extend the capability of the Aerospike DB engine both in terms of functionality and performance. For more information on UDFs, [click here](http://www.aerospike.com/docs/guide/udf.html).
+For example, consider a tic-tac-toe game between John and Jane. If John played three moves simultaneously by opening different browser windows before Jane played her turn, sequence of updates would result in John winning the game by way of “cheating.” Good for John but not so much for Jane! (Till she figures out the same technique… yea, John!)
+
+In this application, concurrency control is achieved by putting conditional writes and game state updates on the server using User Defined Functions. UDFs are a powerful feature of Aerospike DB and they can be used to extend the capability of the Aerospike DB engine both in terms of functionality and performance. For more information on UDFs, [click here](http://www.aerospike.com/docs/guide/udf.html).
 
 ## Prerequisite
 
@@ -30,23 +32,23 @@ At a higher-level, here’s what happens -- after creating an account and/or log
 
 NOTE: Users are notified of new game invites via Socket.io
 
-As the game progresses with every move...
+**As the game progresses with every move, here’s what must happen in order to keep the game fair and square:**
 
-* The following conditions must be checked in order to keep the game fair and square:
+1. The following conditions must be checked:
     
-    1.  Is the game already over? If so, is there a winner and who won?
-    2.  Is it current user's turn?
-    3.  Is the selected square already taken?
+    *  Is the game already over? If so, is there a winner and who won?
+    *  Is it current user's turn?
+    *  Is the selected square already taken?
 
-* If the above three conditions result in *NO*, *YES*, *NO* respectively, the state of the game needs to be modified as follows:
+2. If the above three conditions result in *NO*, *YES*, *NO* respectively, the state of the game needs to be modified as follows:
     
-    1.  Selected square's value needs to be set to current user's username
-    2.  Value of *turn* needs to be swapped out to the other user
-    3.  Record needs to be updated in the database to reflect this state
+    *  Selected square's value needs to be set to current user's username
+    *  Value of *turn* needs to be swapped out to the other user
+    *  Record needs to be updated in the database to reflect this state
 
-* Then, taking into account the current state (which now includes the latest move), following conditions needs to be checked and state of the game needs to be updated once again in preparation for the next move:
+3. Then, taking into account the current state (which now includes the latest move), following conditions needs to be checked and state of the game needs to be updated once again in preparation for the next move:
     
-    *   Is the game now over? If so, set *status* to "DUNZZO" and if there is a winner, set *winner* to current user’s username 
+    *  Is the game now over? If so, set *status* to "DUNZZO" and if there is a winner, set *winner* to current user’s username 
 
 ## Usage
 
