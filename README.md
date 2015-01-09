@@ -72,18 +72,18 @@ Run command:
 
 Open web browser and point it to:
 
-  [http://localhost:9000](http://localhost:9000)
+  http://localhost:9000
 
 ### Play
 
 Open two different browsers (or two incongnito browser windows) and login as two different users. Then send a game invite from one user to the other by clicking on **New Game** tab. The new game will auto-appear for both users on **Home** tab. Play the game and see who wins!
 
 <div>
-  <img src="tree/master/app/images/invite.png"\>
+  <img src="app/images/invite.png"\>
 </div>
 
 <div>
-  <img src="tree/master/app/images/accept.png"\>
+  <img src="/app/images/accept.png"\>
 </div>
 
 <div>
