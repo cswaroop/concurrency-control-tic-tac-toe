@@ -83,11 +83,11 @@ Open two different browsers (or two incongnito browser windows) and login as two
 </div>
 
 <div>
-  <img src="/app/images/accept.png"\>
+  <img src="app/images/accept.png"\>
 </div>
 
 <div>
-  <img src="tree/master/app/images/over_won.png"\>
+  <img src="app/images/over_won.png"\>
 </div>
 
 ## Blog
